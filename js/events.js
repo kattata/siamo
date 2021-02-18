@@ -1,7 +1,7 @@
 let defaultEvent;
 
 // fetch all events
-fetch("https://kasialaniecka.com/siamo/wp-json/tribe/events/v1/events")
+fetch("https://siamo.kattata.online/wp-json/tribe/events/v1/events")
     .then(function (response) {
         return response.json();
     })
@@ -47,7 +47,7 @@ function appendCalendar(data) {
 
 //fetch selected event
 async function selectEventId(id) {
-    let response = await fetch(`https://kasialaniecka.com/siamo/wp-json/tribe/events/v1/events/${id}`);
+    let response = await fetch(`https://siamo.kattata.online/wp-json/tribe/events/v1/events/${id}`);
     let data = await response.json();
     addEventInfo(data);
     selectedEvent = data;
