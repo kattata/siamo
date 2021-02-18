@@ -124,7 +124,8 @@ function showSignUpModal() {
 let cancelBtn = document.querySelector(".cancel-button");
 cancelBtn.addEventListener('click', hideSignUpModal);
 
-function hideSignUpModal() {
+function hideSignUpModal(e) {
+    e.preventDefault();
     //slide in modal
     signUpModal.style.transform = "translateX(400px)";
     signUpBg.style.opacity = 0;
